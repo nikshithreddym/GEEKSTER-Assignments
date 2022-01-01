@@ -1,0 +1,168 @@
+DATE : 17/12/2021				                    JAVA ASSIGNMENT 										
+
+
+
+1. Take an array and a number that needs to be checked if present in the array. If number is present,print number is found, else print number
+
+code :
+
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+        
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = {1,2,3,4,5};
+        for(int i=0;i<=arr.length-1;i++){
+            if(arr[i] == n){
+                System.out.print("found");
+                break;
+            }
+            else{
+                System.out.print("Not found");
+                break;
+            }
+            
+        }
+
+    }
+}
+__________________________________________________________________________________________________________________
+
+2. Take an array and a number that needs to be checked if present in the array. If number is present,print number is found along with the index
+   at which it is present,else print number is not found
+
+code :
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+        
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean flag=true;
+        int arr[] = {1,2,3,4,5};
+        for(int i=0;i<=arr.length-1;i++){
+            if(arr[i] == n){
+                System.out.println(i+1);
+                flag = true;
+                break;
+            }
+            else{
+                flag =false;
+            }
+            
+        }
+        if(flag == true){
+                System.out.println("found");
+            }
+        else{
+                System.out.println("Not found");
+            }
+
+    }
+}
+______________________________________________________________________________________________________________________
+
+3.Take an array and a number that needs to be checked if present in the array. If number is present,print number is found along with the last index
+   at which it is present,else print number is not found
+
+code :
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+        int index=0;
+        Scanner sc=new Scanner(System.in);
+        int n = sc.nextInt();
+        boolean flag=true;
+        int arr[] = {1,2,3,4,5,6,7,8,5,3,4,5};
+        for(int i=0;i<=arr.length-1;i++){
+            if(arr[i] == n){
+                flag = true;
+                index = i+1;
+            }
+            else{
+                flag =false;
+            }
+            
+        }
+        if(flag == true){
+            System.out.println(index);
+            System.out.println("found");
+            }
+        else{
+                System.out.println("Not found");
+            }
+
+    }
+}
+
+________________________________________________________________________________________________________________________________________________
+
+4. Print a diamond
+
+	*
+       * *
+      * * *
+
+code :	
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 3; j >= i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        
+
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________
+
+5. Write a program to calculate the sum of following series where you can initialise n as some number
+
+   1 + 1/2 + 1/3 + 1/4 + 1/5 + .........1/n
+
+code :
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+        // double sum=0.0;
+        // double total=0.0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n = sc.nextInt();
+        double i, s = 0.0;
+        double total;
+        
+        for (i = 1; i <= n; i++){
+            s = s + 1/i;
+        }
+        total = 1+ s;
+        
+        System.out.println(total);
+    }
+}
+
+
+
