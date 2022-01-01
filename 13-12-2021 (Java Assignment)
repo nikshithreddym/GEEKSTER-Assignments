@@ -1,0 +1,186 @@
+DATE : 13/12/2021				                    JAVA ASSIGNMENT 										
+
+
+
+1. Write code for printing the last 3 digits of the given number 1557890
+
+code :
+
+public class MyClass {
+    public static void main(String args[]) {
+      int x=1557890;
+      int y = x%1000;
+      System.out.println(y);
+    }
+}
+__________________________________________________________________________________________________________________
+
+2.write code for printing 1 number from begining and 1 number from the given range [1-100]
+		example output: 1,1002,99,3,98,4,97,5,96,6,95......
+
+code :
+ 
+public class MyClass {
+    public static void main(String args[]) {
+        int minNum = 1;
+        int maxNum = 100;
+        
+        int ascNum;
+        int dscNum;
+        
+        ascNum = minNum;
+        dscNum = maxNum;
+        
+        int count =0;
+        
+        while(count < (maxNum - minNum +1)){
+            System.out.print(ascNum);
+            ascNum = ascNum+1;
+            count = count +1;
+            if(count == (maxNum-minNum + 1)){
+                break;
+            }
+            System.out.print(dscNum);
+            dscNum = dscNum-1;
+            count = count +1;
+        }
+    }
+}
+_________________________________________________________________________________________________________________
+
+3.Write code for printing the average of numbers from 12,13,14,15 using while loop
+
+code :
+
+public class MyClass {
+    public static void main(String args[]) {
+        int i=12;
+        int sum =0;
+        int count=0;
+        int average;
+        while(i>=12 & i<=15){
+            sum = sum + i;
+            count = count +1;
+            i++;
+        }
+        average = sum / count;
+        System.out.println(average);
+    }
+}
+_________________________________________________________________________________________________________________
+4.Create a game that takes input as age and classifies the age as follow:
+   a. if the age is ess than 5 years print baby
+   b. if age is between 5 and up to 10 print toddler
+   c. if age is between 10 and up to 18 print teenaged.
+   d. if age is above 18 and between 25 print adult.
+   e. if age is above 25 print Grown old
+
+code :
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+    
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the age :");
+        int age = sc.nextInt();
+        if(age<5){
+            System.out.println("Baby");
+        }
+        else if(age>=5 & age<10){
+            System.out.println("toodler");
+        }
+        else if(age>=10 & age < 18){
+            System.out.println("teenager");
+        }
+        else if(age>=18 & age<25){
+            System.out.println("Adult");
+        }
+        else{
+            System.out.println("Gown old");
+        }
+    
+    }
+}
+
+___________________________________________________________________________________________________________________
+5. Check if the input number is prime or not
+
+code :
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+    
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the age :");
+        int N = sc.nextInt();
+        boolean flag =true; 
+        for(int i=2;i<=N/2;i++){
+            if(N%i == 0){
+                flag = false;
+            }
+            else{
+                flag = true;
+            }
+        }
+        if(flag == false){
+                System.out.println("Not a prime number");
+            }
+            else{
+                System.out.println("prime number");
+            }
+        
+    
+    }
+}
+
+__________________________________________________________________________________________________________________
+6. Take square of sum up to 10
+	example output: 1^2 + 2^2 + 3^2 + .....+ 10^2
+
+code :
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter number");
+        int N = sc.nextInt();
+        for(int i=1;i<=N;i++){
+            System.out.print(i+"^"+2+"+");
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
